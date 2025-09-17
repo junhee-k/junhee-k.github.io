@@ -3,75 +3,19 @@ layout: splash
 permalink: /
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/header-banner.jpg
-excerpt: >
-  Welcome to my developer blog! I'm documenting my journey through my projects, including Project Aria, my Virtual Pet App, and my Music Visualizer.
+  overlay_image: "/assets/images/header-banner.jpg"
+excerpt: "A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios."
 intro:
-  - title: "What I'm Working On"
-    excerpt: "Here are the latest updates from my current development projects."
-    url: "/projects/"
-    btn_label: "View All Projects"
-    btn_class: "btn--inverse"
+  - title: "Super customizable"
+    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
+    image_path: /assets/images/feat-gear.svg
+    url: "#"
+  - title: "Responsive layouts"
+    excerpt: "Built with HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
+    image_path: /assets/images/feat-responsive.svg
+    url: "#"
+  - title: "100% free"
+    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it… whatever!"
+    image_path: /assets/images/feat-free.svg
+    url: "#"
 ---
-
-<div class="feature__wrapper">
-  <h2 class="archive__item-title">Recent Project Updates</h2>
-
-  {% assign category_name = "Project Aria" %}
-  {% if site.categories[category_name] %}
-    {% assign category_posts = site.categories[category_name] | sort: 'date' | reverse %}
-    {% assign latest_post = category_posts[0] %}
-    <div class="feature__item">
-      <div class="archive__item">
-        <h3 class="archive__item-title"><a href="{{ latest_post.url | relative_url }}" rel="permalink">{{ latest_post.title }}</a></h3>
-        <p class="archive__item-excerpt">{{ latest_post.excerpt | markdownify | strip_html | truncate: 200 }}</p>
-        <p><a href="{{ '/categories/' | append: category_name | slugify | relative_url }}">View all {{ category_name }} posts &raquo;</a></p>
-      </div>
-    </div>
-  {% endif %}
-
-  {% assign category_name = "Virtual Pet App" %}
-  {% if site.categories[category_name] %}
-    {% assign category_posts = site.categories[category_name] | sort: 'date' | reverse %}
-    {% assign latest_post = category_posts[0] %}
-    <div class="feature__item">
-      <div class="archive__item">
-        <h3 class="archive__item-title"><a href="{{ latest_post.url | relative_url }}" rel="permalink">{{ latest_post.title }}</a></h3>
-        <p class="archive__item-excerpt">{{ latest_post.excerpt | markdownify | strip_html | truncate: 200 }}</p>
-        <p><a href="{{ '/categories/' | append: category_name | slugify | relative_url }}">View all {{ category_name }} posts &raquo;</a></p>
-      </div>
-    </div>
-  {% endif %}
-
-  {% assign category_name = "Music Visualizer Project" %}
-  {% if site.categories[category_name] %}
-    {% assign category_posts = site.categories[category_name] | sort: 'date' | reverse %}
-    {% assign latest_post = category_posts[0] %}
-    <div class="feature__item">
-      <div class="archive__item">
-        <h3 class="archive__item-title"><a href="{{ latest_post.url | relative_url }}" rel="permalink">{{ latest_post.title }}</a></h3>
-        <p class="archive__item-excerpt">{{ latest_post.excerpt | markdownify | strip_html | truncate: 200 }}</p>
-        <p><a href="{{ '/categories/' | append: category_name | slugify | relative_url }}">View all {{ category_name }} posts &raquo;</a></p>
-      </div>
-    </div>
-  {% endif %}
-</div>
-
----
-
-<div class="feature__wrapper">
-  <h2 class="archive__item-title">Latest Learning Post</h2>
-
-  {% assign category_name = "What I Learn" %}
-  {% if site.categories[category_name] %}
-    {% assign category_posts = site.categories[category_name] | sort: 'date' | reverse %}
-    {% assign latest_post = category_posts[0] %}
-    <div class="feature__item">
-      <div class="archive__item">
-        <h3 class="archive__item-title"><a href="{{ latest_post.url | relative_url }}" rel="permalink">{{ latest_post.title }}</a></h3>
-        <p class="archive__item-excerpt">{{ latest_post.excerpt | markdownify | strip_html | truncate: 200 }}</p>
-        <p><a href="{{ '/categories/' | append: category_name | slugify | relative_url }}">View all {{ category_name }} posts &raquo;</a></p>
-      </div>
-    </div>
-  {% endif %}
-</div>
